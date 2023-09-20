@@ -1,20 +1,28 @@
-const Navbar = (isScrolled) => {
+import Search from "../search";
+import logoNavbar from "/images/logos/logoNavbar.svg";
+
+import { FaRegUser } from "react-icons/fa";
+import { FaRegHeart } from "react-icons/fa";
+import { LuShoppingCart } from "react-icons/lu";
+
+// eslint-disable-next-line react/prop-types
+const Navbar = ({ isScrolled }) => {
   return (
     <>
       <header
         className={`${
           isScrolled ? "bg-white shadow-md" : "bg-transparent"
-        } flex justify-around p-3 fixed w-full z-10 transition-colors ease-out`}
+        } flex justify-between items-center pt-3 pb-3 pr-8 pl-8 fixed w-full z-10 transition-colors ease-out`}
       >
-        <img src="/images/logos/logo.svg" alt="Logo" />
+        <img src={logoNavbar} alt="Logo" />
 
-        <ul className="flex items-center gap-4 font-bold text-sm">
+        <ul className="flex items-center gap-10 font-bold text-sm">
           <li
             className={`${
               isScrolled
                 ? "text-black hover:text-bg-green"
-                : "text-gray-300 hover:text-white"
-            }`}
+                : "text-gray-100 hover:text-white"
+            } cursor-pointer`}
           >
             Home
           </li>
@@ -22,8 +30,8 @@ const Navbar = (isScrolled) => {
             className={`${
               isScrolled
                 ? "text-black hover:text-bg-green"
-                : "text-gray-300 hover:text-white"
-            }`}
+                : "text-gray-100 hover:text-white"
+            } cursor-pointer`}
           >
             Sobre Nós
           </li>
@@ -31,8 +39,8 @@ const Navbar = (isScrolled) => {
             className={`${
               isScrolled
                 ? "text-black hover:text-bg-green"
-                : "text-gray-300 hover:text-white"
-            }`}
+                : "text-gray-100 hover:text-white"
+            } cursor-pointer`}
           >
             Contato
           </li>
@@ -40,12 +48,18 @@ const Navbar = (isScrolled) => {
             className={`${
               isScrolled
                 ? "text-black hover:text-bg-green"
-                : "text-gray-300 hover:text-white"
-            }`}
+                : "text-gray-100 hover:text-white"
+            } cursor-pointer`}
           >
             Loja
           </li>
         </ul>
+        <div className="flex justify-around items-center gap-5">
+          <Search />
+          <FaRegUser className="text-white w-auto h-auto p-3 bg-bg-green hover:bg-[#8f8b61] transition-all shadow-md rounded-xl cursor-pointer" />
+          <FaRegHeart className="text-white w-auto h-auto p-3 bg-bg-green hover:bg-[#8f8b61] transition-all shadow-md rounded-xl cursor-pointer" />
+          <LuShoppingCart className="text-white w-auto h-auto p-3 bg-bg-green hover:bg-[#8f8b61] transition-all shadow-md rounded-xl cursor-pointer" />
+        </div>
       </header>
     </>
   );
