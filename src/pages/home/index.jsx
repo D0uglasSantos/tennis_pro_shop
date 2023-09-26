@@ -5,6 +5,7 @@ import Navbar from "../../components/navbar";
 import Products from "../../components/products";
 
 import Images from "../../imagesProducts.json";
+import Footer from "../../components/footer";
 
 const Home = () => {
   const [images, setimages] = useState(Images);
@@ -27,9 +28,10 @@ const Home = () => {
         bg-cover bg-center bg-banner"
         id="banner"
       />
-      <Products 
-        fotos={images} 
-      />
+      <section className="py-8">
+        <Products fotos={images} />
+      </section>
+      <Footer />
     </>
   );
 };
