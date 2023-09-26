@@ -33,7 +33,7 @@ const Navbar = ({ isScrolled }) => {
                 : "text-gray-100 hover:text-white"
             } cursor-pointer`}
           >
-            Sobre Nós
+            About Us
           </li>
           <li
             className={`${
@@ -42,7 +42,7 @@ const Navbar = ({ isScrolled }) => {
                 : "text-gray-100 hover:text-white"
             } cursor-pointer`}
           >
-            Contato
+            Contact
           </li>
           <li
             className={`${
@@ -51,7 +51,7 @@ const Navbar = ({ isScrolled }) => {
                 : "text-gray-100 hover:text-white"
             } cursor-pointer`}
           >
-            Loja
+            Store
           </li>
         </ul>
         <div className="flex justify-around items-center gap-5">

@@ -7,7 +7,7 @@ const Search = () => {
         <input
           className="pr-1 pl-3 pt-3 pb-3 bg-transparent text-black
             focus:outline-none text-lg"
-          placeholder="Pesquisar"
+          placeholder="Search"
         />
         <IoSearch className="w-5 h-5" />
       </div>
